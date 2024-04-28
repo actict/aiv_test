@@ -1,16 +1,16 @@
 ### 아이브 DevOps 과제
 
 1. Vault 실행을 위한 구성 파일
-    - Dockerfile([vault-dockerfile](https://github.com/spring-petclinic/spring-petclinic-data-jdbc))
-    - config.json([config](https://github.com/spring-petclinic/spring-petclinic-data-jdbc))
+    - Dockerfile([vault-dockerfile](https://github.com/actict/aiv_test/blob/main/Dockerfile))
+    - config.json([config](https://github.com/actict/aiv_test/blob/main/config.json))
 
 2. Vault와 Kubernetes 연동과 권한을 위한 구성 파일
-    - developer-serviceaccount.yaml([developer-serviceaccount](https://github.com/spring-petclinic/spring-petclinic-data-jdbc))
-    - developer-clusterrole.yaml([developer-clusterrole](https://github.com/spring-petclinic/spring-petclinic-data-jdbc))
-    - developer-clusterrolebinding.yaml([developer-clusterrolebinding](https://github.com/spring-petclinic/spring-petclinic-data-jdbc))
-    - admin-serviceaccount.yaml([admin-serviceaccount](https://github.com/spring-petclinic/spring-petclinic-data-jdbc))
-    - admin-clusterrole.yaml([admin-clusterrole](https://github.com/spring-petclinic/spring-petclinic-data-jdbc))
-    - admin-clusterrolebinding.yaml([admin-clusterrolebinding](https://github.com/spring-petclinic/spring-petclinic-data-jdbc))
+    - developer-serviceaccount.yaml([developer-serviceaccount](https://github.com/actict/aiv_test/blob/main/developer-serviceaccount.yaml))
+    - developer-clusterrole.yaml([developer-clusterrole](https://github.com/actict/aiv_test/blob/main/developer-clusterrole.yaml))
+    - developer-clusterrolebinding.yaml([developer-clusterrolebinding](https://github.com/actict/aiv_test/blob/main/developer-clusterrolebinding.yaml))
+    - admin-serviceaccount.yaml([admin-serviceaccount](https://github.com/actict/aiv_test/blob/main/admin-serviceaccount.yaml))
+    - admin-clusterrole.yaml([admin-clusterrole](https://github.com/actict/aiv_test/blob/main/admin-clusterrole.yaml))
+    - admin-clusterrolebinding.yaml([admin-clusterrolebinding](https://github.com/actict/aiv_test/blob/main/admin-clusterrolebinding.yaml))
 
 3. Vault CLI 작업
     - Vault에 Kubernetes Authentication 메소드 활성화
@@ -47,7 +47,11 @@
     $ vault login -method=kubernetes role=admin-role jwt=$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)
     ```
 4. pod, pvc 생성을 위한 구성 파일
-    - app1-pod.yaml([app1-pod](https://github.com/spring-petclinic/spring-petclinic-data-jdbc))
-    - app1-pvc.yaml([app1-pvc](https://github.com/spring-petclinic/spring-petclinic-data-jdbc))
-    - app2-pod.yaml([app2-pod](https://github.com/spring-petclinic/spring-petclinic-data-jdbc))
-    - app2-pvc.yaml([app2-pvc](https://github.com/spring-petclinic/spring-petclinic-data-jdbc))
+    - app-service.yaml([app-service](https://github.com/actict/aiv_test/blob/main/app-service.yaml))
+    - app.yaml([app](https://github.com/actict/aiv_test/blob/main/app.yaml))
+    - app-pvc.yaml([app-pvc](https://github.com/actict/aiv_test/blob/main/app-pvc.yaml))
+    - app-pv.yaml([app-pv](https://github.com/actict/aiv_test/blob/main/app-pv.yaml))
+    - app2-service.yaml([app2-service](https://github.com/actict/aiv_test/blob/main/app2-service.yaml))
+    - app2.yaml([app2](https://github.com/actict/aiv_test/blob/main/app2.yaml))
+    - app2-pvc.yaml([app2-pvc](https://github.com/actict/aiv_test/blob/main/app2-pvc.yaml))
+    - app-pv.yaml([app2-pv](https://github.com/actict/aiv_test/blob/main/app2-pv.yaml))
