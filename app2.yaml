@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app2
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app2
+  template:
+    metadata:
+      labels:
+        app: app2
+    spec:
+      volumes:  # 볼륨 정의 추가
+      - name: app2-pv-storage
+        persistentVolumeClaim:
+          claimName: app2-pv-claim
+      containers:
+      - name: app2
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: app2-pv-storage
+          mountPath: "/logs"  # 컨테이너 내부의 로그 디렉토리 경로

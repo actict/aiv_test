@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: admin-clusterrole-binding
+subjects:
+- kind: ServiceAccount
+  name: admin-serviceaccount
+  namespace: default
+roleRef:
+  kind: ClusterRole
+  name: admin-pod-pvc-creator
+  apiGroup: rbac.authorization.k8s.io
+
