@@ -56,6 +56,6 @@
     - app2-pvc.yaml([app2-pvc](https://github.com/actict/aiv_test/blob/main/app2-pvc.yaml))
     - app-pv.yaml([app2-pv](https://github.com/actict/aiv_test/blob/main/app2-pv.yaml))
 
-**보완사항**
+**보완사항** </br>
     - develop 계정이 특정 pod와 pvc에 접근되도록 설정하는 부분에 대해 developer-clusterrole.yaml([developer-clusterrole](https://github.com/actict/aiv_test/blob/main/developer-clusterrole.yaml))에 추가하였습니다.
       다만, 잦은 배포로 pod명이 변경이 될 수 있어 이렇게 사용한다면 수시로 권한 부분에도 업데이트가 필요하며 관리하기 쉽지가 않아 권장하지는 않고, 네임스페이스 단위로 관리하는 것을 권장합니다.
