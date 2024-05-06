@@ -5,10 +5,12 @@ metadata:
 rules:
 - apiGroups: [""]
   resources: ["pods"]
+  resourceNames: ["app-78fb999949-nbz64"]
   verbs: ["create", "get", "update", "delete", "list", "watch"]
 - apiGroups: [""]
   resources: ["persistentvolumes"]
   verbs: ["get", "list", "watch", "create", "delete"]
 - apiGroups: [""]
   resources: ["persistentvolumeclaims"]
+  resourceNames: ["app1-pvc"]
   verbs: ["get", "list", "watch", "update"]
